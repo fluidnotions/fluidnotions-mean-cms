@@ -1,0 +1,28 @@
+<div *ngIf="items" class="card-deck-wrapper">
+  <div class="card-deck" *ngFor="let deck of decks">
+    <!--Card-->
+    <div *ngFor="let item of deck" class="card mt-3">
+
+      <!--Card image-->
+      <div class="view hm-white-slight waves-light" mdbRippleRadius>
+        <img src="{{item.featuredImg}}" class="card-img-top img-fluid" alt="">
+        <a>
+          <div class="mask"></div>
+        </a>
+      </div>
+
+      <!--Card content-->
+      <div class="card-body">
+        <!--Title-->
+        <h4 class="card-title">{{item.title}}</h4>
+        <!--Text-->
+        <div class="card-text text-center" [innerHtml]="item.excerpt"></div>
+      </div>
+       <div class="card-footer">
+          <a class="btn btn-primary waves-light" mdbRippleRadius>More</a>
+        </div>
+
+    </div>
+
+  </div>
+</div>

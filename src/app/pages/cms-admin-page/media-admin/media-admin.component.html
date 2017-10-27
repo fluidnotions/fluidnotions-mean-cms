@@ -1,0 +1,29 @@
+<div class="row m-5">
+  <div class="col">
+    <div class="gy3 card z-depth-5">
+      <!-- Form contact -->
+      <form class="p-5" novalidate (ngSubmit)="submitForm(form)">
+        <div class="white-text">
+          <h3 class="h3-responsive text-center mb-4 ts">Upload Media</h3>
+
+          <div class="form-group">
+            <label for="mediaFile">Add media file</label>
+            <input type="file" [(ngModel)]="form" (change)="fileChange($event)" class="form-control-file" id="mediaFile" name="file">
+          </div>
+
+
+          <div class="text-center">
+            <button [disabled]="formSubmitted" type="submit" class="btn gx3 ts waves-light">Upload <i class="fa fa-paper-plane-o ml-1"></i></button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Form contact -->
+    </div>
+  </div>
+  <div class="col">
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" [src]='mediaGalleryUrl' allowfullscreen></iframe>
+    </div>
+  </div>
+</div>

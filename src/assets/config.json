@@ -1,0 +1,12 @@
+{
+    "landingPage": {
+        "logoUrl": "static/logo.png",
+        "videoPoster": "static/background.png",
+        "video": "static/background-video.mp4"
+    },
+    "host": {
+        "PROTOCOL": "http",
+        "PORT": 3000,
+        "HOST_NAME": "localhost"
+    }
+}
