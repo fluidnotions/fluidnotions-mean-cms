@@ -87,3 +87,4 @@ html {
 .aqua-gradient{
   @include gradient-x-three-colors(#34B7ED, #0BE9B7, 50%, #3662B7);
 }
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";

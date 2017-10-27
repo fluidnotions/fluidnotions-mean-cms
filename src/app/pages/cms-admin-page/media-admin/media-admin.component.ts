@@ -3,8 +3,6 @@ import { RequestOptions } from '@angular/http';
 import { NgForm } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { RestClientService } from "app/services/rest-client.service";
-import { DomSanitizer } from '@angular/platform-browser';
-
 
 @Component({
   selector: 'app-media-admin',
@@ -15,16 +13,9 @@ export class MediaAdminComponent implements OnInit {
 
   fileList: FileList;
   form: any;
-  mediaGalleryUrl: any;
-  currentImg: string;
 
-  constructor(private client: RestClientService, public sanitizer: DomSanitizer) { 
-    this.mediaGalleryUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.client.prefixWithBaseUrl('photos'));
-    window.addEventListener('message', (e) => {
-      var message = e.data;
-      this.currentImg = this.client.prefixWithBaseUrl(message.currentImg);
-      console.log("currentImg: "+this.currentImg);
-    });
+  constructor(private client: RestClientService) { 
+   
   }
 
   ngOnInit() {

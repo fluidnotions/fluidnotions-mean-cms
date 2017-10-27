@@ -1,3 +1,4 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LocalStorageModule } from 'angular-2-local-storage';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
@@ -20,6 +21,7 @@ import { GenericContentPageRoutingModule } from "app/pages/generic-content-page/
 import { CmsAdminPageModule } from "app/pages/cms-admin-page/cms-admin-page.module";
 import { CmsAdminPageRoutingModule } from "app/pages/cms-admin-page/cms-admin-page-routing.module";
 import { RestClientService } from "app/services/rest-client.service";
+
 
 
 @NgModule({
@@ -45,7 +47,8 @@ import { RestClientService } from "app/services/rest-client.service";
     ContactPageModule,
     ContactPageRoutingModule,
     AboutPageModule,
-    AboutPageRoutingModule
+    AboutPageRoutingModule,
+    BrowserAnimationsModule
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [RestClientService, EventService, PreloadPageContentService, { provide: ConfigureOptions, useClass: ConfigOptions }],
